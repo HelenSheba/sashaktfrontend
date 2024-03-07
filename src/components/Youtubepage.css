@@ -1,0 +1,14 @@
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover,
+  .card.shake {
+    transform: scale(1.1);
+  }
+  
+  button {
+    margin-top: 10px;
+  }

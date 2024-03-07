@@ -1,0 +1,9 @@
+.explorebackground-image{
+    background-image: url('https://res.cloudinary.com/djpqj3nhr/image/upload/v1703582290/ytvimg_k8xmkm.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    min-height: 10vh; /* Set the minimum height to cover the entire viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

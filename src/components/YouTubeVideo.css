@@ -1,0 +1,29 @@
+/*youtube*/
+.fullscreen-video {
+    background-image: url("https://res.cloudinary.com/djpqj3nhr/image/upload/v1703582290/ytvimg_k8xmkm.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  
+  .youtube-container {
+    width: 100%;
+    height: 100vh;
+    }
+  /* Youtubepage.css */
+  .ytbackground-image {
+    background-image: url('https://res.cloudinary.com/djpqj3nhr/image/upload/v1703582290/ytvimg_k8xmkm.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Set the minimum height to cover the entire viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-body{
+    background-color: #ecf4f0;
+  }

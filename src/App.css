@@ -1,0 +1,1189 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#background-image {
+  position: fixed;
+  width: 100%;
+  height: 89vh;
+  overflow: hidden;
+}
+
+#background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.heading-box1 {
+  background-color: rgba(18, 18, 18, 0.003);
+  border: 2px solid #494b4b;
+  border-radius: 10px;
+  padding:20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  margin-left: 9%;
+  margin-right: 1%;
+  font-size: 2em;
+  font-family:'fantasy';
+  color: #565252;
+}
+@media (max-width: 768px) {
+  .heading-box1 {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+    margin-left: 2%; /* Adjust margin for smaller screens */
+    margin-right: 2%;
+  }
+}
+
+.login-block {
+  position:relative;
+  width: 90%;
+  max-width: 180px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  background-color: rgba(218, 103, 103, 0.955);
+  color: rgb(213, 190, 56);
+  padding: 80px;
+  z-index: 1;
+
+
+  .carouselExampleAutoplaying {
+    width: 100%;
+    margin: auto;
+  }
+
+  .carousel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-item img {
+    width: 50%;
+    object-fit: fill;
+  }
+
+  .card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 18rem;
+    margin-bottom: 20px;
+  }
+
+  .card img {
+    height: 50px;
+    width: 20%;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+  }
+
+  .btn-success {
+    width: 50%;
+  }
+}
+
+.cardstyling {
+  .card {
+      width: 90%;
+  }
+
+  .card img {
+      width: 100%;
+      height: 250px;
+      /* Adjust the height as needed */
+      object-fit: cover;
+      /* Maintain image aspect ratio */
+  }
+
+  .card-body {
+      text-align: center;
+  }
+}
+
+/* App.css */
+* { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+} 
+
+/*.App { 
+	height: 100vh; 
+	width: 100vw; 
+	font-family: cursive; 
+	background-color: rgb(237, 200, 141); 
+} 
+*/
+/* CSS for GameBoard component */
+.container { 
+	display: flex; 
+	flex-direction: column; 
+} 
+
+.header { 
+	display: flex; 
+	flex-direction: row; 
+	padding: 10px; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+} 
+
+h1 { 
+	font-size: 4.5rem; 
+	color: rgba(24, 23, 23, 0.019); 
+
+} 
+
+.button { 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	padding: 0.5rem 0.8rem; 
+	font-family: cursive; 
+	width: 200px; 
+	font-size: 1.2rem; 
+	font-weight: bolder; 
+	border-radius: 0.7rem; 
+	border-style: none; 
+	background-color: rgb(234, 81, 81); 
+	color: white; 
+	margin-top: 4px; 
+	margin-left: 55%; 
+} 
+
+.button:hover { 
+	border: 2px solid black; 
+	cursor: pointer; 
+} 
+
+
+
+.board {
+  display: grid;
+  margin: auto;
+  margin-top: 3rem;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr); /* Updated grid-template-columns */
+  place-items: center;
+  row-gap: 1rem;
+}
+
+.comments { 
+	padding: 0.25rem 1rem; 
+	background-color: rgb(131, 177, 121); 
+	margin: auto; 
+	margin-top: 40px; 
+	text-align: center; 
+	border-radius: 2rem; 
+} 
+
+/* CSS for Card component */
+.face { 
+	height: 5rem; 
+} 
+
+.back { 
+	height: 6rem; 
+	width: 6rem; 
+	background-color: rgba(212, 209, 250, 0.562); 
+	color: rgb(130, 76, 76); 
+	border: 1px solid black; 
+	border-radius: 50%; 
+} 
+
+.item .face { 
+	position: absolute; 
+	transform: rotateY(90deg); 
+	transition: all ease-in 0.25s; 
+
+} 
+
+.toggled .face { 
+	transform: rotateY(0deg); 
+	transition-delay: 0.25s; 
+} 
+
+.item .back { 
+	transition: all ease-in 0.25s; 
+	transition-delay: 0.25s; 
+} 
+
+.toggled .back { 
+	transform: rotateY(90deg); 
+	transition-delay: 0s; 
+}
+
+  .timer {
+    font-size: 1.2rem;
+    color: rgb(247, 247, 247);
+    margin-top: 0.5rem;
+  }
+
+  .quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  }
+  
+  .question-section {
+    text-align: center;
+    
+  }
+  
+  .answer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .button1 {
+    margin-top: 50px;
+    padding: 100px; /* Increase button size */
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .correct-answer {
+    background-color: #4caf50; /* Green for correct answer */
+    color: #fff;
+  }
+  
+  .wrong-answer {
+    background-color: #f44336; /* Red for wrong answer */
+    color: #fff;
+  }
+  
+  .score-section-box {
+    background-color: #6ab791;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 100px;
+    
+  }
+  
+  .score-section {
+    display: inline;
+  }
+ 
+.correct-answer-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact {
+  align-items: bottom;
+  text-align: left;
+  background-color: #f7dff1;
+  margin-right: 50px;
+  
+}
+
+.box30 {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  &:focus {
+    outline: none;
+  }
+}
+
+.setting {
+  align-self: flex-start;
+  padding: 5px 10px;
+
+  button {
+    font-size: 15px;
+  }
+
+  input {
+    font-size: 20px;
+  }
+}
+
+.topWall {
+  border-top: 4px solid black;
+}
+
+.rightWall {
+  border-right: 4px solid black;
+}
+
+.bottomWall {
+  border-bottom: 4px solid black;
+}
+
+.leftWall {
+  border-left: 4px solid black;
+}
+
+.sol {
+  div {
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    background: peachpuff;
+    display: inline-block;
+  }
+}
+
+.currentPosition {
+  div {
+    background: salmon;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+  }
+}
+
+.destination {
+  div {
+    background: SpringGreen;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+  }
+}
+
+.currentPosition.destination {
+  div {
+    animation: rainbowBall 5s infinite;
+  }
+}
+
+@keyframes rainbowBall {
+  0%   {background-color: gold;}
+  15%  {background-color: coral;}
+  29%  {background-color: papayawhip;}
+  43%  {background-color: darkseagreen;}
+  57%  {background-color: lightcyan;}
+  71% {background-color: dodgerblue;}
+  84% {background-color: violet;}
+  100% {background-color: indigo;}
+}
+
+#maze {
+  margin-top: 105px;
+  border-collapse: collapse;
+  td {
+    height: 35px;
+    width: 35px;
+  }
+  
+}
+
+.info {
+  width: 200px;
+  position: absolute;
+  top: 70px;
+  background: cornsilk;
+  padding: 3px;
+  margin-left: 1200px;
+  font-size: 20px;
+  p {
+    text-transform: uppercase;
+    color: forestgreen;
+  }
+}
+
+#gradient {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #EE7752, #b25579, #6aafc8, #23D5AB);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.flippedEmoji {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/*candygame*/
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+
+.app9 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: black;
+}
+
+.score-board9 {
+  background-color: #bac007;
+  width: 100%;
+  font-size: 2em;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+/*  style for the game section */
+
+.game9 {
+  width: 500px;
+  /* Set the width of the game container to 500px */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.game9 img {
+  width: calc(12.5% - 10px);
+  /* Adjust width to fit 8 candies per row */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  transition: transform 0.3s ease-in-out;
+  margin: 5px;
+  /* Increase margin to match width adjustment */
+}
+
+
+.game9 img:hover {
+  box-shadow: 0px 3px 6px gold;
+  transform: scale(1.1);
+}
+
+
+/* Set variables for colors */
+:root {
+  --primary-color: black;
+  --secondary-color: yellow;
+  --body-font: 'Roboto', sans-serif;
+}
+
+/* Style the body */
+
+/* Style the header */
+.header9 {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+}
+
+/* Style the logo */
+.logo9 img {
+  height: 30px;
+  border-radius: 50%;
+
+}
+
+/* Style the mute button */
+.icon9 {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.icon9 img {
+  height: 20px;
+  margin-right: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* Style the main content */
+.main-body9 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 180vh;
+  padding: 5rem 1rem;
+  font-family: var(--body-font);
+  background-color: var(--primary-color);
+}
+
+.content9 {
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Style the banner */
+.banner9 {
+  font-size: 8rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  padding: 2rem;
+  font-family: 'Passion One', cursive;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px yellow;
+  animation-name: shadow-pulse;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 10px yellow;
+  }
+
+  50% {
+    box-shadow: 0 0 20px yellow;
+  }
+
+  100% {
+    box-shadow: 0 0 10px yellow;
+  }
+}
+
+
+/* Style the motto */
+.motto9 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--secondary-color);
+  text-shadow: 0 0 5px yellow;
+}
+
+/* Style the start game button */
+.start-game9 {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  margin: 10px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.start-game9:hover {
+  transform: scale(1.05);
+}
+
+/* Style the candy crush image */
+.candy-crush-image9 {
+  width: 400px;
+  margin: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 4.5rem;
+}
+
+/* Style the footer */
+.footer9 {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.about9 {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #000000;
+  height: 750px;
+}
+
+.about9-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 1rem;
+  margin: 50px;
+  margin-bottom: 2rem;
+}
+
+.about9-body {
+
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: black;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
+}
+
+/* Add these styles to your CSS file */
+.home-about {
+  display: flex;
+  justify-content: flex-end;
+  /* Adjust alignment to the right */
+  margin-top: 20px;
+  /* Add margin-top as needed */
+}
+
+.candy1 {
+  width: 100px;
+  /* Adjust the width of the image */
+  height: 100px;
+  /* Adjust the height of the image */
+  border-radius: 50%;
+  position: absolute;
+  left: 60px;
+  top: 80px;
+}
+
+.candy2 {
+  width: 100px;
+  /* Adjust the width of the image */
+  height: 100px;
+  /* Adjust the height of the image */
+  border-radius: 50%;
+  position: absolute;
+  right: 60px;
+  top: 80px;
+}
+
+.candy3 {
+  width: 80px;
+  /* Adjust the width of the image */
+  height: 80px;
+  /* Adjust the height of the image */
+  border-radius: 50%;
+  position: absolute;
+  left: 100px;
+  top: 65px;
+}
+
+.candy4 {
+  width: 80px;
+  /* Adjust the width of the image */
+  height: 80px;
+  /* Adjust the height of the image */
+  border-radius: 50%;
+  position: absolute;
+  right: 100px;
+  top: 65px;
+}
+
+.about-instructions h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.about-instructions h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2e1797;
+}
+
+.about-instructions p {
+  font-size: 18px;
+  font-family: cursive;
+  text-transform: none;
+}
+
+/*profile*/
+.home-container {
+  position: relative;
+}
+
+.h2-text {
+  position: absolute;
+  top: 15%;
+  left: 40%;
+  font-size: 50px;
+  color: #222;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 4);
+}
+
+.texts-style {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  font-size: 30px;
+  color: #222;
+}
+
+.box1-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 300px;
+}
+
+.clickable-box {
+  width: 550px;
+  height: 350px;
+  background-color: #dc143c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-style {
+  width: 450px;
+  height: 250px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box1 {
+  margin-left: 120px;
+}
+
+.box2 {
+  margin-right: 100px;
+}
+
+.box1-text,
+.box2-text {
+  position: absolute;
+  margin-top: 250px;
+  font-size: 30px;
+  color: #222;
+}
+
+/* Responsive styles for smaller screens */
+
+@media screen and (max-width: 768px) {
+  .h2-text {
+    top: 10%;
+    left: 25%;
+    font-size: 30px;
+  }
+
+  .texts-style {
+    top: 20%;
+    left: 6%;
+    font-size: 20px;
+  }
+
+  .box1-container {
+    margin-top: 200px;
+    margin-left: 60px;
+    flex-direction: column;
+  }
+
+  .clickable-box {
+    width: 80%;
+    height: 250px;
+  }
+
+  .image-style {
+    width: 70%;
+    height: 150px;
+  }
+
+  .box1 {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .box2 {
+    margin-right: 0;
+  }
+
+  .box1-text,
+  .box2-text {
+    margin-top: 170px;
+    font-size: 20px;
+  }
+}
+.emojiContainer {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Set 8 emojis in a row */
+  gap: 60px;
+}
+
+.emojiWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emojiStyle {
+  width: 160px;
+  height: 160px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+/* Add styles for other emojis similarly */
+
+/* For screens smaller than 768px (tablets) */
+@media (max-width: 768px) {
+  .textStyle9 {
+    font-size: 40px;
+    top: 10%;
+    left: 30%;
+  }
+
+  .emojiContainer {
+    margin-top: 10%;
+    grid-template-columns: repeat(3, 1fr); /* Display 3 emojis in a row */
+    gap: 20px;
+  }
+
+  .emojiStyle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+  .textStyle9 {
+    font-size: 26px;
+    top: 10%;
+    left: 25%;
+  }
+
+  .emojiContainer {
+    margin-top: 15%;
+    grid-template-columns: repeat(2, 1fr); /* Display 2 emojis in a row */
+    gap: 20px;
+  }
+
+  .emojiStyle {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.textStyle9 {
+  position: absolute;
+  top: 12%;
+  left: 36%;
+  font-size: 60px;
+  color: #222;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .textStyle9 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+    left: 50%; /* Center the element on smaller screens */
+    transform: translateX(-50%); /* Adjust horizontal position for centering */
+  }
+}
+
+.homeContainer6 {
+  min-height: 190vh;
+  background-color: #F7DFF1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/*diy*/
+.pikachu-info {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.pikachu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pikachu-image {
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width of the image */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.pikachu-text {
+  text-align: center;
+  text-transform: none;
+}
+
+.pikachu-text h1 {
+  color: #f57c00;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.pikachu-text p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 20px;
+  text-transform: none;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.additional-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.additional-boxes {
+  display: flex;
+  flex-direction: column; /* Set boxes to stack vertically */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.additional-box {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 1400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.additional-box h2 {
+  color: #f57c00;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.additional-box p {
+  color: #333;
+  line-height: 1.6;
+  text-transform: none;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+.image-grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Adjust the gap as needed */
+}
+
+
+.step-content {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+
+.step-content img {
+  width: 250px; /* Adjust the image width */
+  height: auto;
+  margin-right: 20px;
+}
+
+.youtube-video {
+  width: 50%;
+  height: 415px;
+}
+
+@media screen and (max-width: 768px) {
+  .pikachu-content {
+    flex-direction: column;
+  }
+
+  .pikachu-text {
+    text-align: center;
+  }
+
+  .pikachu-image {
+    margin-bottom: 10px;
+  }
+
+  .step-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-content img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .additional-box {
+    width: 300px;
+  }
+
+  .youtube-video {
+    width: 320px;
+    height: 250px;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px; /* Adjust the gap as needed */
+  }
+  
+  .image-grid2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px; /* Adjust the gap as needed */
+  }
+}
+
+.activities {
+  text-align: center;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  text-decoration: none;
+  color: #333;
+  margin: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+  background-color: #f9f9f9;
+  font-size: 24px;
+}
+
+.emoji-img {
+  width: 40px;
+  height: 40px;
+  margin-left: 2000%;
+}
+
+.emoji-img2 {
+  width: 110px;
+  height: 110px;
+  margin-top: 10%;
+  margin-left: 25%;
+}
+
+.username {
+  font-size: 24px;
+  font-weight: 500;
+  font-family:cursive;
+}
+
+.custom-button {
+  background-color: #6ab791;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 52px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
